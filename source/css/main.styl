@@ -1,0 +1,146 @@
+@import "normalize"
+@import "pygment"
+@import "iconfont"
+
+bannercolor = #7A7A7A
+linkcolor = lighten(bannercolor, 45%)
+linkhovercolor = #DF013A
+sitetitlecolor = darken(bannercolor, 45%)
+menupadding = 70px
+titlefont = Jura
+
+linkstyle()
+    a
+        color: linkhovercolor
+        padding-left: 1px
+        padding-right: 1px
+        &:hover 
+            color: white
+            background: linkhovercolor
+            text-decoration: none
+            text-shadow: 0 0 3px white
+            border-radius: 3px
+            transition-property: text-shadow, background, color
+            transition-duration: 0.2s
+            transition-timing-function: ease-in-out 
+
+titlestyle()
+    a
+        text-decoration: none
+        text-transform: uppercase
+        color: linkhovercolor
+        &:hover
+            color: lighten(linkhovercolor, 10%)
+            text-shadow: 0 0 8px lighten(linkhovercolor, 40%)
+            transition-property: text-shadow, color
+            transition-duration: 0.2s
+            transition-timing-function: ease-in-out 
+
+body
+    margin: 0
+    padding: 0
+    background: url(/theme/images/grid.png)
+
+#banner
+    background: bannercolor
+    box-shadow: 0 6px 10px 3px rgba(red(darken(bannercolor, 70%)),green(darken(bannercolor, 70%)),blue(darken(bannercolor, 70%)),0.7)
+    border-bottom: 3px solid sitetitlecolor
+    h1
+        font-family: titlefont
+        margin-top: 0
+        padding-left: 30px
+        padding-bottom: 0
+        padding-top: 20px
+        max-width: 320px
+    a
+        text-decoration: none
+        text-transform: uppercase
+        color: sitetitlecolor
+        strong
+            display: block
+            color: linkcolor
+            margin-top: 0
+            font-size: 0.7em
+        &:hover
+            color: lighten(sitetitlecolor, 10%)
+            text-shadow: 0 0 8px lighten(sitetitlecolor, 40%)
+            transition-property: text-shadow, color
+            transition-duration: 0.2s
+            transition-timing-function: ease-in-out
+            strong
+                color: lighten(linkcolor, 10%)
+                text-shadow: 0 0 8px lighten(linkcolor, 40%)
+                transition-property: text-shadow, color
+                transition-duration: 0.2s
+                transition-timing-function: ease-in-out
+
+#menu
+    float: right
+    text-transform: uppercase
+    font-family: titlefont
+    li
+        display: inline
+    a
+        text-decoration: none
+        padding-top: menupadding
+        padding-left: 3px
+        padding-right: 3px
+        padding-bottom: 3px
+        color: linkcolor
+        border-radius: 3px
+    .active a, a:hover 
+        background-color: linkcolor 
+        color: linkhovercolor
+        transition-property: background, color
+        transition-duration: 1s
+        transition-timing-function: ease-in-out
+    margin-top: -130px
+    padding-right: 30px
+    padding-top: menupadding
+
+#content
+    max-width: 960px
+    width: 70%
+    margin: auto
+    h1, h2, h3, h4, h5, h6
+        font-family: titlefont
+        color: sitetitlecolor
+        text-transform: uppercase
+    ol
+        list-style-type: none
+    .entry-title
+            titlestyle()
+        .post-info, .entry-content 
+            linkstyle()
+    .highlight
+        background: #1A1A1A
+        color: white
+        padding: 10px
+        margin: 0
+        border-radius: 3px
+        border: 1px solid sitetitlecolor
+
+#contentinfo
+    font-family: titlefont
+    linkstyle()
+    background: bannercolor
+    color: linkcolor
+    border-top: 3px solid sitetitlecolor
+    margin-top: 40px
+    padding-top: 10px
+    padding-bottom: 10px
+    text-align: center
+    .social-links
+        a
+            margin: 1em
+            font-size:2em
+            color: linkcolor
+            text-decoration: none
+            background: none
+            &:hover    
+                color: white
+                text-shadow: 0 0 3px white
+                transition-property: text-shadow, color
+                transition-duration: 0.2s
+                transition-timing-function: ease-in-out 
+

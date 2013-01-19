@@ -1,0 +1,27 @@
+@font-face
+    font-family: entypo
+    src: url(/theme/fonts/entypo.woff)
+    font-weight: normal
+    font-style: normal
+
+[data-icon]:before
+  font-family: entypo
+  content: attr(data-icon)
+  speak: none
+  font-weight: normal
+  line-height: 1
+  -webkit-font-smoothing: antialiased
+
+.icon-github:before, .icon-twitter:before
+  font-family: entypo
+  speak: none
+  font-style: normal
+  font-weight: normal
+  line-height: 1
+  -webkit-font-smoothing: antialiased
+
+.icon-github:before
+  content: "\e002"
+
+.icon-twitter:before
+  content: "\e003"
