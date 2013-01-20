@@ -44,7 +44,7 @@ body
 #banner
     background: bannercolor
     box-shadow: 0 6px 10px 3px rgba(red(darken(bannercolor, 70%)),green(darken(bannercolor, 70%)),blue(darken(bannercolor, 70%)),0.7)
-    border-bottom: 3px solid sitetitlecolor
+    border-bottom: 2px solid sitetitlecolor
     h1
         font-family: titlefont
         margin-top: 0
@@ -119,13 +119,20 @@ body
         margin: 0
         border-radius: 3px
         border: 1px solid sitetitlecolor
+    #post-list
+        li
+            .hentry
+                border-bottom: 1px solid sitetitlecolor
+            &:last-child
+                .hentry
+                    border: none
 
 #contentinfo
     font-family: titlefont
     linkstyle()
     background: bannercolor
     color: linkcolor
-    border-top: 3px solid sitetitlecolor
+    border-top: 2px solid sitetitlecolor
     margin-top: 40px
     padding-top: 10px
     padding-bottom: 10px
