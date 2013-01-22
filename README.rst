@@ -3,9 +3,8 @@ This is a theme for pelican_ static site generator
 
 Roadmap
 =======
-    
-    v 1.0
-    =====
+
+    v1.0
 
         - 404.html
         - 100% `page speed test`_ optimisation
