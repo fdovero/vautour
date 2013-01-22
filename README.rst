@@ -5,18 +5,20 @@ Roadmap
 =======
 
 v1.0
-####
+----
 - 404.html
 - 100% `page speed test`_ optimisation
 - `w3c html5 valid`_
 - `w3c css3 valid`_
+- embed all the ressources ( avoid cdn and google )
+- limit the ressources weight ( optimised )
 
 Credits
 =======
 
-Entypo pictograms by `Daniel Bruce`_.
-Jura font by `Daniel Johnson`_.
-Normalize.css_ embedded.
+- Entypo pictograms by `Daniel Bruce`_.
+- Jura font by `Daniel Johnson`_.
+- Normalize.css_ embedded.
 
 Licence
 =======
