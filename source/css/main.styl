@@ -2,8 +2,8 @@ bannercolor = #463D39
 linkcolor = lighten(bannercolor, 45%)
 linkhovercolor = #DF013A
 sitetitlecolor = darken(bannercolor, 45%)
-menupadding = 75px
-titlefont =  Jura
+menupadding = 85px
+titlefont = Oswald 
 
 @import "normalize"
 @import "pygment"
@@ -27,6 +27,7 @@ linkstyle()
 
 titlestyle()
     a
+        font-size: 1em
         text-decoration: none
         text-transform: uppercase
         color: linkhovercolor
@@ -47,6 +48,7 @@ body
     background: url(/theme/images/grid.png)
 
 #banner
+    font-size: 1.2em
     background: bannercolor
     box-shadow: 0 6px 10px 3px rgba(red(darken(bannercolor, 70%)),green(darken(bannercolor, 70%)),blue(darken(bannercolor, 70%)),0.7)
     border-bottom: 2px solid sitetitlecolor
@@ -68,13 +70,13 @@ body
             font-size: 0.7em
         &:hover
             color: lighten(sitetitlecolor, 5%)
-            text-shadow: 0 0 8px lighten(sitetitlecolor, 40%)
+            text-shadow: 0 0 16px lighten(sitetitlecolor, 40%)
             transition-property: text-shadow, color
             transition-duration: 0.2s
-            transition-timing-function: ease-in-outli inverted css
+            transition-timing-function: ease-in-out
             strong
                 color: lighten(linkcolor, 10%)
-                text-shadow: 0 0 8px lighten(linkcolor, 40%)
+                text-shadow: 0 0 16px lighten(linkcolor, 40%)
                 transition-property: text-shadow, color
                 transition-duration: 0.2s
                 transition-timing-function: ease-in-out
@@ -84,11 +86,12 @@ body
     width: 70%
     max-width: 960px
     margin: auto
-    margin-top : - menupadding
-    margin-bottom: menupadding + 20 px
+    margin-top : - menupadding 
+    margin-bottom: menupadding + 30 px
     padding-top: 20px
     text-transform: uppercase
     font-family: titlefont
+    font-size: 1.2em
     ul
         float: right
         li
@@ -96,8 +99,8 @@ body
     a
         text-decoration: none
         padding-top: menupadding
-        padding-left: 3px
-        padding-right: 3px
+        padding-left: 6px
+        padding-right: 6px
         padding-bottom: 3px
         color: linkcolor
         border-radius: 3px
@@ -140,6 +143,8 @@ body
             &:last-child
                 .hentry
                     border: none
+    .align-middle
+        vertical-align: middle
 
 
 #contentinfo
@@ -151,10 +156,10 @@ body
     padding-top: 10px
     padding-bottom: 10px
     text-align: center
-    .social-links
+    .social-links, #credits
         a
             margin: 1em
-            font-size:2em
+            font-size: 2em
             color: linkcolor
             text-decoration: none
             background: none
@@ -163,4 +168,8 @@ body
                 text-shadow: 0 0 3px white
                 transition-property: text-shadow, color
                 transition-duration: 0.2s
-                transition-timing-function: ease-in-out 
+                transition-timing-function: ease-in-out
+    #credits
+        a
+            font-size: 1em
+            margin: 0.2em

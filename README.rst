@@ -17,7 +17,7 @@ Credits
 =======
 
 - Entypo pictograms by `Daniel Bruce`_.
-- Jura font by `Daniel Johnson`_.
+- Oswald font by `Vernon Adams`_.
 - Normalize.css_ embedded.
 
 License
@@ -30,5 +30,5 @@ The code for this theme is under the MIT license.
 .. _`page speed test`: //developers.google.com/speed/pagespeed/insights#url=blog.dovero.org&mobile=false
 .. _pelican: //blog.getpelican.com
 .. _`Daniel Bruce`: //entypo.com
-.. _`Daniel Johnson`: //www.fontsquirrel.com/fonts/jura1
+.. _`Vernon Adams`: http://www.fontsquirrel.com/fonts/oswald
 .. _Normalize.css: //necolas.github.com/normalize.css/
