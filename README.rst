@@ -19,6 +19,7 @@ Credits
 - Entypo pictograms by `Daniel Bruce`_.
 - Oswald font by `Vernon Adams`_.
 - Normalize.css_ embedded.
+- Including the amazing Typeplate_
 
 License
 =======
@@ -32,3 +33,4 @@ The code for this theme is under the MIT license.
 .. _`Daniel Bruce`: //entypo.com
 .. _`Vernon Adams`: http://www.fontsquirrel.com/fonts/oswald
 .. _Normalize.css: //necolas.github.com/normalize.css/
+.. _Typeplate: //typeplate.com

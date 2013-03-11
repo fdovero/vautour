@@ -1,7 +1,8 @@
-bannercolor = #463D39
-linkcolor = lighten(bannercolor, 45%)
-linkhovercolor = #DF013A
+bannercolor = #463d39
+linkcolor = lighten(bannercolor, 35%)
+linkhovercolor = #d46d24
 sitetitlecolor = darken(bannercolor, 45%)
+sitetitlecolor = linkhovercolor
 menupadding = 85px
 titlefont = Oswald 
 
@@ -9,34 +10,34 @@ titlefont = Oswald
 @import "pygment"
 @import "font"
 @import "404"
+@import "typeplate"
 
 linkstyle()
     a
         color: linkhovercolor
         padding-left: 1px
         padding-right: 1px
+        border-radius: 3px
+        transition-property: text-shadow, background, color
+        transition-duration: 0.3s
+        transition-timing-function: ease-in-out 
         &:hover 
             color: white
             background: linkhovercolor
             text-decoration: none
             text-shadow: 0 0 3px white
-            border-radius: 3px
-            transition-property: text-shadow, background, color
-            transition-duration: 0.2s
-            transition-timing-function: ease-in-out 
 
 titlestyle()
     a
-        font-size: 1em
         text-decoration: none
         text-transform: uppercase
         color: linkhovercolor
+        transition-property: text-shadow, color
+        transition-duration: 0.3s
+        transition-timing-function: ease-in-out
         &:hover
             color: lighten(linkhovercolor, 5%)
-            text-shadow: 1px -1px 1px darken(linkhovercolor, 40%)
-            transition-property: text-shadow, color
-            transition-duration: 0.2s
-            transition-timing-function: ease-in-out 
+            text-shadow: 2px -2px 2px darken(linkhovercolor, 80%)
 
 html
     height: 100%
@@ -64,22 +65,22 @@ body
         text-decoration: none
         text-transform: uppercase
         color: sitetitlecolor
+        transition-property: text-shadow, color
+        transition-duration: 0.7s
+        transition-timing-function: ease-in-out
         strong
             color: linkcolor
             margin-top: 0
             font-size: 0.7em
+            transition-property: text-shadow, color
+            transition-duration: 0.7s
+            transition-timing-function: ease-in-out
         &:hover
             color: lighten(sitetitlecolor, 5%)
-            text-shadow: 0 0 16px lighten(sitetitlecolor, 40%)
-            transition-property: text-shadow, color
-            transition-duration: 0.2s
-            transition-timing-function: ease-in-out
+            text-shadow: 0 0 16px white 
             strong
                 color: lighten(linkcolor, 10%)
-                text-shadow: 0 0 16px lighten(linkcolor, 40%)
-                transition-property: text-shadow, color
-                transition-duration: 0.2s
-                transition-timing-function: ease-in-out
+                text-shadow: 0 0 16px white
 
 
 #menu
@@ -87,7 +88,7 @@ body
     max-width: 960px
     margin: auto
     margin-top : - menupadding 
-    margin-bottom: menupadding + 30 px
+    margin-bottom: menupadding + 30px
     padding-top: 20px
     text-transform: uppercase
     font-family: titlefont
@@ -98,18 +99,19 @@ body
             display: inline
     a
         text-decoration: none
-        padding-top: menupadding
+        padding-top: menupadding + 30px
         padding-left: 6px
         padding-right: 6px
         padding-bottom: 3px
         color: linkcolor
         border-radius: 3px
+        transition-property: background, color
+        transition-duration: 0.7s
+        transition-timing-function: ease-in-out
     .active a, a:hover 
         background-color: linkcolor 
         color: linkhovercolor
-        transition-property: background, color
-        transition-duration: 1s
-        transition-timing-function: ease-in-out
+        text-shadow: 2px -2px 2px darken(linkhovercolor, 80%)
 
 #content
     position: relative
@@ -121,7 +123,7 @@ body
     padding-bottom: 30px
     h1, h2, h3, h4, h5, h6
         font-family: titlefont
-        color: sitetitlecolor
+        color: bannercolor
         text-transform: uppercase
     ol
         list-style-type: none
@@ -130,16 +132,17 @@ body
         .post-info, .entry-content 
             linkstyle()
     .highlight
-        background: #1A1A1A
-        color: white
-        padding: 10px
-        margin: 0
+        background: #eee
+        margin-bottom: 20px
+        padding-left: 10px
+        padding-right: 10px
         border-radius: 3px
         border: 1px solid sitetitlecolor
     #post-list
         li
             .hentry
-                border-bottom: 1px solid sitetitlecolor
+                margin-bottom: 20px
+                border-bottom: 1px solid bannercolor
             &:last-child
                 .hentry
                     border: none
@@ -163,13 +166,14 @@ body
             color: linkcolor
             text-decoration: none
             background: none
+            transition-property: text-shadow, color
+            transition-duration: 0.3s
+            transition-timing-function: ease-in-out
             &:hover    
                 color: white
                 text-shadow: 0 0 3px white
-                transition-property: text-shadow, color
-                transition-duration: 0.2s
-                transition-timing-function: ease-in-out
     #credits
         a
-            font-size: 1em
+            font-size: 1.4em
             margin: 0.2em
+            vertical-align: middle
