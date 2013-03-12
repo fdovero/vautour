@@ -1,7 +1,6 @@
 bannercolor = #463d39
 linkcolor = lighten(bannercolor, 35%)
 linkhovercolor = #d46d24
-sitetitlecolor = darken(bannercolor, 45%)
 sitetitlecolor = linkhovercolor
 menupadding = 85px
 titlefont = Oswald 
@@ -32,12 +31,11 @@ titlestyle()
         text-decoration: none
         text-transform: uppercase
         color: linkhovercolor
-        transition-property: text-shadow, color
+        transition-property: color
         transition-duration: 0.3s
         transition-timing-function: ease-in-out
         &:hover
-            color: lighten(linkhovercolor, 5%)
-            text-shadow: 2px -2px 2px darken(linkhovercolor, 80%)
+            color: saturate(lighten(linkhovercolor, 50%), 100%)
 
 html
     height: 100%
@@ -65,22 +63,20 @@ body
         text-decoration: none
         text-transform: uppercase
         color: sitetitlecolor
-        transition-property: text-shadow, color
+        transition-property: color
         transition-duration: 0.7s
         transition-timing-function: ease-in-out
         strong
             color: linkcolor
             margin-top: 0
             font-size: 0.7em
-            transition-property: text-shadow, color
+            transition-property: color
             transition-duration: 0.7s
             transition-timing-function: ease-in-out
         &:hover
-            color: lighten(sitetitlecolor, 5%)
-            text-shadow: 0 0 16px white 
+            color: saturate(lighten(sitetitlecolor,50%), 100%)
             strong
-                color: lighten(linkcolor, 10%)
-                text-shadow: 0 0 16px white
+                color: saturate(lighten(linkcolor, 50%), 100%)
 
 
 #menu
@@ -110,8 +106,7 @@ body
         transition-timing-function: ease-in-out
     .active a, a:hover 
         background-color: linkcolor 
-        color: linkhovercolor
-        text-shadow: 2px -2px 2px darken(linkhovercolor, 80%)
+        color: saturate(lighten(linkhovercolor, 50%), 100%)
 
 #content
     position: relative
