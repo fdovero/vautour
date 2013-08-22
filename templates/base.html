@@ -53,10 +53,11 @@
         {% block content %}
         {% endblock %}
         <footer id="contentinfo" class="body">
-            <div class="social-links">
+            <div id="bottom-links">
             {% for social in SOCIAL %}
-                <a href="{{ social[1]  }}" target="_blank"><i class="icon-{{ social[0] }}"></i></a>
-            {% endfor %} 
+                <a href="{{ social[1]  }}" target="_blank"><i class="s-icon-{{ social[0] }}"></i></a>
+            {% endfor %}
+                <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" target="_blank"><i class="s-icon-rss"></i></a>
             </div>
             <div id="credits">
                Except where otherwise noted, content on this site is licensed under<a href="//creativecommons.org/licenses/by-sa/3.0/deed.en"><i class="icon-cc"></i><i class="icon-cc-by"></i><i class="icon-cc-sa"></i></a>
