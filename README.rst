@@ -6,6 +6,7 @@ Roadmap
 
 v1.0
 ----
+- 10/10 `Opquast Reporting`_
 - 404.html
 - 100% `page speed test`_ optimisation
 - `w3c html5 valid`_
@@ -26,6 +27,7 @@ License
 
 The code for this theme is under the MIT license.
 
+.. _`Opquast Reporting`: https://reporting.opquast.com/en/inspector/
 .. _`w3c css3 valid` : http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fblog.dovero.org%2F
 .. _`w3c html5 valid`: http://validator.w3.org/check?uri=http%3A%2F%2Fblog.dovero.org%2F&charset=utf-8&doctype=HTML5&group=0&user-agent=W3C_Validator%2F1.3
 .. _`page speed test`: http://developers.google.com/speed/pagespeed/insights#url=blog.dovero.org&mobile=false
