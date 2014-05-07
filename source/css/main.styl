@@ -3,13 +3,13 @@ linkcolor = lighten(bannercolor, 35%)
 linkhovercolor = #d46d24
 sitetitlecolor = linkhovercolor
 menupadding = 85px
-titlefont = Oswald 
+titlefont = Oswald
 
 @import "normalize"
 @import "pygment"
 @import "font"
 @import "404"
-@import "typeplate"
+//@import "typeplate"
 
 linkstyle()
     a
@@ -47,17 +47,22 @@ body
     background: url(/theme/images/grid.png)
 
 #banner
-    font-size: 1.2em
     background: bannercolor
     border-bottom: 12px solid sitetitlecolor
     h1
         font-family: titlefont
         margin: auto
         margin-top: 0
-        padding : 10px
-        padding-left : 0
+        padding: 10px
+        padding-left: 0
+        padding-bottom: 0
         width: 70%
         max-width: 960px
+        @media screen and (max-width:800px)
+            font-size: 40px
+        @media screen and (max-width:600px)
+            width: 100%
+
     a
         text-decoration: none
         text-transform: uppercase
@@ -66,17 +71,18 @@ body
         transition-duration: 0.7s
         transition-timing-function: ease-in-out
         strong
+            font-size: 0.7em
             color: linkcolor
             margin-top: 0
-            font-size: 0.7em
             transition-property: color
             transition-duration: 0.7s
             transition-timing-function: ease-in-out
+            @media screen and (max-width:600px)
+                display: none
         &:hover
             color: saturate(lighten(sitetitlecolor,50%), 100%)
             strong
                 color: saturate(lighten(linkcolor, 50%), 100%)
-
 
 #menu
     width: 70%
@@ -107,6 +113,8 @@ body
         background-color: linkcolor
         color: linkhovercolor
         text-shadow: 0 0 6px bannercolor
+    @media screen and (max-width:600px)
+        width:100%
 
 #content
     position: relative
@@ -148,7 +156,9 @@ body
                     border: none
     .align-middle
         vertical-align: middle
-
+    @media screen and (max-width:600px)
+        width: 100%
+        padding-right: 15px
 
 #contentinfo
     font-family: titlefont
